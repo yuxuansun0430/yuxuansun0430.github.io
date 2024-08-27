@@ -8,6 +8,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+skin: daylight
+
 exclude:
   - scripts/
   - README.md
