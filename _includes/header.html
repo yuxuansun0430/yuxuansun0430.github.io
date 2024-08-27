@@ -14,11 +14,11 @@
       {%- assign avatar = site.avatar -%}
     {%- else -%}
       {%- assign avatar = site.avatar | relative_url -%}
-    {%- endif -%}
+    {%- endif %}
     <i class="far fa-user"></i>
   </a>
 
-  <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <span class="site-title" rel="author">{{ site.title | escape }}</span>
 
   {% if site.data.navigation %}
     <nav class="site-nav">
@@ -47,7 +47,7 @@
               <li><a class="{% if page.url == nav.url %}current-page{% endif %}" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a></li>
             {% endif %}
           {%- endif -%}
-        {%- endfor -%}
+        {%- endfor %}
       </ul>
     </nav>
   {% endif %}
