@@ -3,25 +3,26 @@
 
   <head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   </head>
 
-  <body>
+  <body class="custom-body">
     <div class="site-container">
-      <header class="site-header">
+      <header class="site-header custom-header">
         {% include header.html %}
       </header>
       
-      <div class="site-body wrapper">
-        <aside class="site-sidebar" id="site-sidebar">
+      <div class="site-body wrapper custom-wrapper">
+        <aside class="site-sidebar custom-sidebar" id="site-sidebar">
           {% if page.toc %}
             {% include sidebar-toc.html %}
           {% else %}
             {% include sidebar.html %}
           {% endif %}
         </aside>
-        <main class="site-main" id="site-main" aria-label="Content" tabindex="1">
+        <main class="site-main about-content" id="site-main" aria-label="Content" tabindex="1">
           {{ content }}
-          <footer class="site-footer">
+          <footer class="site-footer custom-footer">
             {% include footer.html %}
           </footer>
         </main>
